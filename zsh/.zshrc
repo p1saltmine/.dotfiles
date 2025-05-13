@@ -70,7 +70,6 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
 plugins=(git colored-man-pages colorize pip python brew macos)
 
 source $ZSH/oh-my-zsh.sh
@@ -103,30 +102,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-#zoxide
 #
-source ~/.zoxide_code.sh
+#
+#fzf
+source <(fzf --zsh)
 
-
-
-
-
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-
-# Created by `pipx` on 2025-04-22 08:05:38
-export PATH="$PATH:/Users/pawan.k/.local/bin"
-export PATH="/usr/local/opt/postgresql@17/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/postgresql@17/lib"
-export CPPFLAGS="-I/usr/local/opt/postgresql@17/include"
-
-
+# zoxide
 eval "$(zoxide init --cmd cd zsh)"
