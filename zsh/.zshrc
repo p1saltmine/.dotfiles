@@ -109,3 +109,13 @@ source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+
+#ck-sso-cli path
+export PATH="$HOME/.local/bin:$PATH"
+
+
+# Source custom aliases
+if [ -f "$HOME/.aliases.zsh" ]; then
+    source "$HOME/.aliases.zsh"
+fi
