@@ -1,0 +1,8 @@
+# Global .gitignore
+listRoutes.js
+*.log
+*.swo
+*.swp
+*~
+.DS_Store
+
