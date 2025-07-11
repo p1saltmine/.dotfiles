@@ -28,3 +28,11 @@
   pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
 [core]
 	excludesfile = /Users/pawan.k/.gitignore_global
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = pawan
+	email = pawan.c@saltmine.com
